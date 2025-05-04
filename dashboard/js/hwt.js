@@ -1,4 +1,4 @@
-/*
+})(jQuery);/*
 		* highlight-within-textarea
 		*
 		* @author  Will Boyd
