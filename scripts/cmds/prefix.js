@@ -78,7 +78,7 @@ module.exports = {
     const name = data.name;
     const xyrene = {
       body: getLang("myPrefix", global.GoatBot.config.prefix, utils.getPrefix(event.threadID)),
-      attachment: await global.utils.getStreamFromURL("https://i.imgur.com/vdAEGPt.jpeg")
+      attachment: await global.utils.getStreamFromURL("https://i.postimg.cc/Nj44bTy3/received-620337510952444.jpg")
         };
     if (event.body && event.body.toLowerCase() === "prefix")
       return () => {
