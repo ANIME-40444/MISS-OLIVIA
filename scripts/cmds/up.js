@@ -6,7 +6,7 @@ module.exports = {
         name: "up",
         aliases: ["uptime", "upt"],
         version: "1.2",
-        author: "ADNAN/JISAN",//**you needed my cmd but don't share this cmd***and original author fb I'd : https://www.facebook.com/VEX.ADNAN.404 **//
+        author: "ADNAN/JISAN",//**you needed my cmd but don't share this cmd***and original author fb I'd : https://www.facebook.com/XAIKO.JISAN **//
         countDown: 5,
         role: 0,
         shortDescription: {
@@ -22,7 +22,7 @@ module.exports = {
     },
 
     onStart: async function ({ message, event, args, api, usersData, threadsData }) {
-        const iURL = "https://i.imgur.com/FhSk86T.jpeg"; //**photo link to fixed don't change photo link okay bro**//
+        const iURL = "https://i.postimg.cc/HkPMVxDD/received-1297317428187329.jpg"; //**photo link to fixed don't change photo link okay bro**//
         const uptime = process.uptime();
         const s = Math.floor(uptime % 60);
         const m = Math.floor((uptime / 60) % 60);
