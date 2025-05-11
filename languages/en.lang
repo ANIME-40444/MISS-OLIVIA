@@ -85,23 +85,23 @@ socketIO.connected= 𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙴𝙳 𝚃𝙾 𝚂𝙾𝙲�
 socketIO.error= 𝙰𝚗 𝙴𝚁𝚁𝙾𝚁 𝙾𝙲𝙲𝚄𝚁𝚁𝙴𝙳 𝚆𝙷𝙴𝙽 𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙽𝙶 𝚃𝙾 𝚃𝙷𝙴 𝚂𝙾𝙲𝙺𝙴𝚃.𝙸𝙾 𝚂𝙴𝚁𝚅𝙴𝚁
 
 # bot/handler/handlerCheckData.js
-handlerCheckData.cantCreateThread=𝙶𝚁𝙾𝚄𝙿𝚂 𝚆𝙸𝚃𝙷 𝙸𝙳 '%1' 𝙲𝙰𝙽𝙽𝙾𝚃 𝙱𝙴 𝚆𝚁𝙸𝚃𝚃𝙴𝙽 𝚃𝙾 𝚃𝙷𝙴 𝙹𝙸𝚂𝙰𝙽 𝙳𝙰𝚃𝙰𝙱𝙰𝚂𝙴 !
-handlerCheckData.cantCreateUser=𝚄𝚂𝙴𝚁 𝚆𝙸𝚃𝙷 𝙸𝙳 '%1'  𝙲𝙰𝙽𝙽𝙾𝚃 𝙱𝙴 𝚆𝚁𝙸𝚃𝚃𝙴𝙽 𝚃𝙾 𝚃𝙷𝙴 𝙹𝙸𝚂𝙰𝙽 𝙳𝙰𝚃𝙰𝙱𝙰𝚂𝙴!
+handlerCheckData.cantCreateThread=𝙶𝚁𝙾𝚄𝙿𝚂 𝚆𝙸𝚃𝙷 𝙸𝙳 '%1' 𝙲𝙰𝙽𝙽𝙾𝚃 𝙱𝙴 𝚆𝚁𝙸𝚃𝚃𝙴𝙽 𝚃𝙾 𝚃𝙷𝙴 𝚂𝙰𝙶𝙾𝚁 𝙳𝙰𝚃𝙰𝙱𝙰𝚂𝙴 !
+handlerCheckData.cantCreateUser=𝚄𝚂𝙴𝚁 𝚆𝙸𝚃𝙷 𝙸𝙳 '%1'  𝙲𝙰𝙽𝙽𝙾𝚃 𝙱𝙴 𝚆𝚁𝙸𝚃𝚃𝙴𝙽 𝚃𝙾 𝚃𝙷𝙴 𝚂𝙰𝙶𝙾𝚁 𝙳𝙰𝚃𝙰𝙱𝙰𝚂𝙴!
 
 # bot/handler/handlerEvents.js
-handlerEvents.userBanned= 𝚈𝙾𝚄 𝙷𝙰𝚅𝙴 𝙱𝙰𝙽𝙽𝙴𝙳 𝙵𝚁𝙾𝙼 𝙹𝙸𝚂𝙰𝙽 𝚂𝙴𝚁𝚅𝙴𝚁 𝙿𝙻𝙴𝙰𝚂𝙴 𝙲𝙸𝙽𝚃𝙰𝙲𝚃 𝙹𝙸𝚂𝙰𝙽 𝙰𝙳𝙼𝙸𝙽 𝙸 𝙼𝙴𝙰𝙽 𝙹𝙸𝚂𝙰𝙽 \n☞︎︎︎ 𝚁𝙴𝙰𝚂𝙾𝙽: %1\n☞︎︎︎  𝚃𝙸𝙼𝙴: %2\n☞︎︎︎ 𝚄𝚂𝙴𝚁 𝙸𝙳: %3
-handlerEvents.threadBanned= 𝚃𝙷𝙸𝚂 𝙶𝚁𝙾𝚄𝙿 𝙱𝙰𝙽𝙽𝙴𝙳 𝙵𝚁𝙾𝙼 𝙹𝙸𝚂𝙰𝙽 \n☞︎︎︎ 𝚁𝙴𝙰𝚂𝙾𝙽: %1\n☞︎︎︎ 𝚃𝙸𝙼𝚂: %2\n☞︎︎︎ 𝚃𝙷𝚁𝙴𝙰𝙳 𝙸𝙳: %3
-handlerEvents.onlyAdminBox= 𝚃𝙷𝙸𝚂 𝙶𝚁𝙾𝚄𝙿 𝙸𝚂 𝙲𝚄𝚁𝚁𝙴𝙽𝚃𝙻𝚈 𝙾𝙽 𝙶𝚁𝙾𝚄𝙿 𝙰𝙳𝙼𝙸𝙽 𝙼𝙾𝙾𝙳 𝙽𝙾𝚆 𝙰𝙳𝙼𝙸𝙽 𝙰𝚅𝙰𝙸𝙻𝙰𝙱𝙻𝙴 𝙾𝙽𝙻𝚈 𝙵𝙾𝚁 𝙶𝚁𝙾𝚄𝙿 𝙰𝙳𝙼𝙸𝙽
-handlerEvents.onlyAdminBot=📛 | 𝙲𝚄𝚁𝚁𝙴𝙽𝚃𝙻𝚈 𝙾𝙽𝙻𝚈 𝙹𝙸𝚂𝙰𝙽 𝙰𝙳𝙼𝙸𝙽 𝙲𝙰𝙽 𝚄𝚂𝙴 𝚃𝙷𝙴 𝙱𝙾𝚃
-handlerEvents.commandNotFound=𝙲𝙼𝙳 "%1" 𝙳𝙾𝙴𝚂 𝙽𝙾𝚃 𝙴𝚇𝙸𝚂𝚃, 𝚃𝚈𝙿𝙴 %2𝙷𝙴𝙻𝙿 𝚃𝙾 𝚅𝙸𝙴𝚆 𝙹𝙸𝚂𝙰𝙽 𝙰𝙻𝙻 𝙰𝚅𝙰𝙸𝙻𝙰𝙱𝙻𝙴 𝙲𝙼𝙳
-handlerEvents.commandNotFound2= 𝚃𝙷𝙴 𝙲𝙼𝙳 𝚈𝙾𝚄 𝙰𝚁𝙴 𝚄𝚂𝙸𝙽𝙶 𝙳𝙾𝙴𝚂 𝙽𝙾𝚃 𝙴𝚇𝙸𝚂𝚃, 𝚃𝚈𝙿𝙴%1𝙷𝙴𝙻𝙿 𝚃𝙾 𝚅𝙸𝙴𝚆 𝙹𝙸𝚂𝙰𝙽 𝙰𝙻𝙻 𝙲𝙼𝙳
-handlerEvents.commandSyntaxError= 𝚃𝙷𝙴 𝙹𝙸𝚂𝙰𝙽 𝙲𝙼𝙳 𝙰𝚁𝙴 𝚈𝙾𝚄 𝚄𝚂𝙸𝙽𝙶 𝙸𝚂 𝚆𝚁𝙾𝙽𝙶 𝚂𝚈𝙽𝚃𝙰𝚇, 𝙿𝙻𝙴𝙰𝚂𝙴 𝚃𝚈𝙿𝙴 %1𝙷𝙴𝙻𝙿 %2 𝚃𝙾 𝚂𝙴𝙴 𝚃𝙷𝙴 𝙳𝙴𝚃𝙰𝙸𝙻𝚂 𝙾𝙵 𝙹𝙸𝚂𝙰𝙽 𝙰𝙻𝙻 𝙲𝙼𝙳𝚂 𝙰𝙽𝙳 𝙷𝙾𝚆 𝚃𝙾 𝚄𝚂𝙴 𝙲𝙼𝙳
+handlerEvents.userBanned= 𝚈𝙾𝚄 𝙷𝙰𝚅𝙴 𝙱𝙰𝙽𝙽𝙴𝙳 𝙵𝚁𝙾𝙼 𝚂𝙰𝙶𝙾𝚁 𝚂𝙴𝚁𝚅𝙴𝚁 𝙿𝙻𝙴𝙰𝚂𝙴 𝙲𝙸𝙽𝚃𝙰𝙲𝚃 𝚂𝙰𝙶𝙾𝚁 𝙰𝙳𝙼𝙸𝙽 𝙸 𝙼𝙴𝙰𝙽 𝚂𝙰𝙶𝙾𝚁 \n☞︎︎︎ 𝚁𝙴𝙰𝚂𝙾𝙽: %1\n☞︎︎︎  𝚃𝙸𝙼𝙴: %2\n☞︎︎︎ 𝚄𝚂𝙴𝚁 𝙸𝙳: %3
+handlerEvents.threadBanned= 𝚃𝙷𝙸𝚂 𝙶𝚁𝙾𝚄𝙿 𝙱𝙰𝙽𝙽𝙴𝙳 𝙵𝚁𝙾𝙼 𝚂𝙰𝙶𝙾𝚁 \n☞︎︎︎ 𝚁𝙴𝙰𝚂𝙾𝙽: %1\n☞︎︎︎ 𝚃𝙸𝙼𝚂: %2\n☞︎︎︎ 𝚃𝙷𝚁𝙴𝙰𝙳 𝙸𝙳: %3
+handlerEvents.onlyAdminBox= 𝚃𝙷𝙸𝚂 𝙶𝚁𝙾𝚄𝙿 𝙸𝚂 𝙲𝚄𝚁𝚁𝙴𝙽𝚃𝙻𝚈 𝙾𝙽 𝙶𝚁𝙾𝚄𝙿 𝙰𝙳𝙼𝙸𝙽 𝙼𝙾𝙾𝙳 𝙽𝙾𝚆 𝚂𝙰𝙶𝙾𝚁 𝙰𝚅𝙰𝙸𝙻𝙰𝙱𝙻𝙴 𝙾𝙽𝙻𝚈 𝙵𝙾𝚁 𝙶𝚁𝙾𝚄𝙿 𝙰𝙳𝙼𝙸𝙽
+handlerEvents.onlyAdminBot=📛 | 𝙲𝚄𝚁𝚁𝙴𝙽𝚃𝙻𝚈 𝙾𝙽𝙻𝚈 𝚂𝙰𝙶𝙾𝚁 𝙰𝙳𝙼𝙸𝙽 𝙲𝙰𝙽 𝚄𝚂𝙴 𝚃𝙷𝙴 𝙱𝙾𝚃
+handlerEvents.commandNotFound=𝙲𝙼𝙳 "%1" 𝙳𝙾𝙴𝚂 𝙽𝙾𝚃 𝙴𝚇𝙸𝚂𝚃, 𝚃𝚈𝙿𝙴 %2𝙷𝙴𝙻𝙿 𝚃𝙾 𝚅𝙸𝙴𝚆 𝚂𝙰𝙶𝙾𝚁 𝙰𝙻𝙻 𝙰𝚅𝙰𝙸𝙻𝙰𝙱𝙻𝙴 𝙲𝙼𝙳
+handlerEvents.commandNotFound2= 𝚃𝙷𝙴 𝙲𝙼𝙳 𝚈𝙾𝚄 𝙰𝚁𝙴 𝚄𝚂𝙸𝙽𝙶 𝙳𝙾𝙴𝚂 𝙽𝙾𝚃 𝙴𝚇𝙸𝚂𝚃, 𝚃𝚈𝙿𝙴%1𝙷𝙴𝙻𝙿 𝚃𝙾 𝚅𝙸𝙴𝚆 𝚂𝙰𝙶𝙾𝚁 𝙰𝙻𝙻 𝙲𝙼𝙳
+handlerEvents.commandSyntaxError= 𝚃𝙷𝙴 𝚂𝙰𝙶𝙾𝚁 𝙲𝙼𝙳 𝙰𝚁𝙴 𝚈𝙾𝚄 𝚄𝚂𝙸𝙽𝙶 𝙸𝚂 𝚆𝚁𝙾𝙽𝙶 𝚂𝚈𝙽𝚃𝙰𝚇, 𝙿𝙻𝙴𝙰𝚂𝙴 𝚃𝚈𝙿𝙴 %1𝙷𝙴𝙻𝙿 %2 𝚃𝙾 𝚂𝙴𝙴 𝚃𝙷𝙴 𝙳𝙴𝚃𝙰𝙸𝙻𝚂 𝙾𝙵 𝚂𝙰𝙶𝙾𝚁 𝙰𝙻𝙻 𝙲𝙼𝙳𝚂 𝙰𝙽𝙳 𝙷𝙾𝚆 𝚃𝙾 𝚄𝚂𝙴 𝙲𝙼𝙳
 handlerEvents.onlyAdmin=📛 |𝙾𝙽𝙻𝚈 𝙶𝚁𝙾𝚄𝙿 𝙰𝙳𝙼𝙸𝙽 𝙲𝙰𝙽 𝚄𝚂𝙴 𝚃𝙷𝙴 𝙲𝙼𝙳 "%1"
 handlerEvents.onlyAdminToUseOnReply=📛 | 𝙾𝙽𝙻𝚈 𝙶𝚁𝙾𝚄𝙿 𝙰𝙳𝙼𝙸𝙽 𝙲𝙰𝙽 𝚄𝚂𝙴 𝚃𝙷𝙴 𝙲𝚁𝚁𝙿𝙻𝚈 𝙵𝚄𝙽𝙲𝚃𝙸𝙾𝙽 𝙾𝙵 𝚃𝙷𝙴 𝙲𝙼𝙳 "%1"
 handlerEvents.onlyAdminToUseOnReaction=📛 | 𝙾𝙽𝙻𝚈 𝙶𝚁𝙾𝚄𝙿 𝙰𝙳𝙼𝙸𝙽 𝙲𝙰𝙽 𝚄𝚂𝙴 𝚃𝙷𝙴 𝚁𝚁𝙰𝙲𝚃𝙸𝙾𝙼 𝙵𝚄𝙽𝙲𝚃𝙸𝙾𝙽 𝙾𝙵 𝚃𝙷𝙴 𝙲𝙼𝙳  "%1"
-handlerEvents.onlyAdminBot2=📛 |𝙷𝙰𝙷𝙰𝙷𝙷𝙰 𝚃𝙷𝙸𝚂 𝙲𝙼𝙳 𝚄𝚂𝙸𝙽𝙶 𝙾𝙽𝙻𝚈 𝙹𝙸𝚂𝙰𝙽 𝙰𝙳𝙼𝙸𝙽 "%1"
-handlerEvents.onlyAdminBot2ToUseOnReply=📛 | 𝙷𝙰𝙶𝙰𝙷 𝙾𝙽𝙻𝚈 𝙹𝙸𝚂𝙰𝙽 𝙱𝙾𝚃 𝙰𝙳𝙼𝙸𝙽 𝚇𝙰𝙽 𝚄𝚂𝙴 𝚃𝙷𝙴 𝚁𝙴𝙿𝙻𝚈 𝙵𝚄𝙽𝙲𝚃𝙸𝙾𝙽 𝙾𝙵 𝚃𝙷𝙴 𝙲𝙼𝙳 "%1"
-handlerEvents.onlyAdminBot2ToUseOnReaction=📛 | 𝙷𝙰𝙷𝙰𝙷𝙷𝙰 𝚃𝙷𝙸𝚂 𝙲𝙼𝙳 𝚄𝚂𝙸𝙽𝙶 𝙾𝙽𝙻𝚈 𝙹𝙸𝚂𝙰𝙽 𝙰𝙳𝙼𝙸𝙽 "%1"
+handlerEvents.onlyAdminBot2=📛 |𝙷𝙰𝙷𝙰𝙷𝙷𝙰 𝚃𝙷𝙸𝚂 𝙲𝙼𝙳 𝚄𝚂𝙸𝙽𝙶 𝙾𝙽𝙻𝚈 𝚂𝙰𝙶𝙾𝚁 𝙰𝙳𝙼𝙸𝙽 "%1"
+handlerEvents.onlyAdminBot2ToUseOnReply=📛 | 𝙷𝙰𝙶𝙰𝙷 𝙾𝙽𝙻𝚈 𝚂𝙰𝙶𝙾𝚁 𝙱𝙾𝚃 𝙰𝙳𝙼𝙸𝙽 𝚇𝙰𝙽 𝚄𝚂𝙴 𝚃𝙷𝙴 𝚁𝙴𝙿𝙻𝚈 𝙵𝚄𝙽𝙲𝚃𝙸𝙾𝙽 𝙾𝙵 𝚃𝙷𝙴 𝙲𝙼𝙳 "%1"
+handlerEvents.onlyAdminBot2ToUseOnReaction=📛 | 𝙷𝙰𝙷𝙰𝙷𝙷𝙰 𝚃𝙷𝙸𝚂 𝙲𝙼𝙳 𝚄𝚂𝙸𝙽𝙶 𝙾𝙽𝙻𝚈 𝚂𝙰𝙶𝙾𝚁 𝙰𝙳𝙼𝙸𝙽 "%1"
 handlerEvents.waitingForCommand=⏱ 𝚈𝙾𝚄 𝙰𝚁𝙴 𝙸𝙽 𝚃𝙷𝙴 𝚆𝙰𝙸𝚃𝙸𝙽𝙶 𝚃𝙸𝙼𝙴 𝚃𝙾 𝚄𝚂𝙴 𝚃𝙷𝙸𝚂 𝙲𝙼𝙳 𝙿𝙻𝙴𝙰𝚂𝙴 𝙲𝙾𝙼𝙴 𝙱𝙰𝙲𝙺 𝙰𝙵𝚃𝙴𝚁 %1\ns𝙿𝙰𝙼 𝙼𝙰𝚁𝙱𝙸 𝙰𝚁 𝙱𝙾𝙻𝙾𝙳
 handlerEvents.errorOccurred=📛 [ %1 ]\n𝙰𝚗 𝙴𝚁𝚁𝙾𝚁 𝙾𝙲𝙲𝚄𝚁𝚁𝙴𝙳 𝙰𝚃 𝙲𝙼𝙳 "%2"\n\n%3
 handlerEvents.errorOccurred2=📛 [ %1 ]\n𝙰𝚗 𝙴𝚁𝚁𝙾𝚁 𝙾𝙲𝙲𝚄𝚁𝚁𝙴 𝙰𝚃 𝙲𝙼𝙳 𝙾𝙽𝙲𝙷𝙰𝚃 "%2"\n\n%3
