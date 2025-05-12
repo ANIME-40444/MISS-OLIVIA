@@ -23,21 +23,20 @@ module.exports = {
   },
   onStart: async function ({ api, event }) {
       try {
-        const loadingMessage = "𝙻𝙾𝙰𝙳𝙸𝙽𝙶......🤦‍♂️ ";
+        const loadingMessage = "𝙻𝙾𝙰𝙳𝙸𝙽𝙶......🤦‍♂ ";
         await api.sendMessage(loadingMessage, event.threadID);
 
         const ownerInfo = {
           name: '😉✨ 𝗠𝗥-𝗝𝗜𝗦𝗔𝗡 🍀🎀',
           gender: '𝗕𝗢𝗬',
-          hobby: '𝐅𝐨𝐨𝐭𝐛𝐚𝐥𝐥🏈',
-          relationship: '❤️‍🩹🫶𝗦𝗜𝗡𝗚𝗟𝗘🙁😩',
+          hobby: '𝗔𝗡𝗜𝗠𝗘 𝗪𝗔𝗧𝗖𝗛🩷',
+          relationship: '❤‍🩹🫶𝗦𝗜𝗡𝗚𝗟𝗘🙁😩',
           facebookLink: 'ʚɸɞhttps://www.facebook.com/XAIKO.JISAN?mibextid=ZbWKwL.ʚɸɞ',
           bio: '❀𝗢𝗻𝗰𝗲 𝘆𝗼𝘂 𝗹𝗼𝘀𝗲 𝗳𝗮𝗶𝘁𝗵 𝗮𝗻𝗱 𝗯𝗿𝗲𝗮𝘁𝗵, 𝗶𝘁 𝗻𝗲𝘃𝗲𝗿 𝗰𝗼𝗺𝗲𝘀 𝗯𝗮𝗰𝗸 𝗜 𝗵𝗮𝘃𝗲 𝗻𝗼 𝗳𝗮𝗶𝘁𝗵 𝗶𝗻 𝗮𝗻𝘆𝗼𝗻𝗲.🙂💔🌺'
         };
 
         const videoUrl = 
-["https://i.imgur.com/xylAlyY.mp4",
-"https://i.imgur.com/4ArgYHR.mp4",]    
+["https://scontent.xx.fbcdn.net/v/t42.3356-2/495753756_10001098353284624_563551084630282072_n.mp4?_nc_cat=102&_nc_cb=47395efc-686078dc&ccb=1-7&_nc_sid=4f86bc&_nc_ohc=B3yn3XWhMhUQ7kNvwEZA58L&_nc_oc=AdlnCn6i9OTqLymkl6_w3CMfmm8UIoAROwKxszRAfeJqU3lANamDObvne6SS-fdH9Eo&_nc_zt=28&_nc_ht=scontent.xx&_nc_gid=mcFL0HUhBIBIUgAgK8xdgg&oh=03_Q7cD2QHOFZqyeQhP6N336Ug1HsQvIp7IadN1820QJRIZy8aJQg&oe=68240630&dl=1",]    
           
         const tmpFolderPath = path.join(__dirname, 'tmp');
 
@@ -85,4 +84,4 @@ module.exports = {
         console.error('Error in onChat function:', error);
       }
     }
-            }
+}
