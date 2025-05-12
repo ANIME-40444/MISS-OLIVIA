@@ -14,8 +14,8 @@ module.exports = {
  onChat: async function({ event, message, getLang }) {
  if (event.body && event.body.toLowerCase() === "gozo") {
  return message.reply({
- body: "     「 𝗚𝗢𝗭𝗢🔥🔥\n\n\n 𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥\n☆JISAN☆\n\nXAIKO ッ」",
- attachment: await global.utils.getStreamFromURL("https://i.imgur.com/2h9HIoc.mp4")
+ body: "     「 𝗚𝗢𝗭𝗢🔥🔥\n\n\n 𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥\n☆MR☆\n\nJISAN ッ」",
+ attachment: await global.utils.getStreamFromURL("https://drive.google.com/uc?id=16kxMxU_kdPz88kBtKPnLTUm-k-USwbnc")
  });
  }
  }
