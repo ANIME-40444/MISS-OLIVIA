@@ -18,14 +18,14 @@
   },
   "adminBot": [
     "61572683683709",
-    "100072378825674"
+    ""
   ],
   "whiteListMode": {
     "enable": false,
     "whiteListIds": [],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "nickNameBot": "—͟͟͞͞𖣘𝙾𝙻𝙸𝚅𝙸𝙰✭𝙱𝙾𝚃 𝙱𝙾𝚇 ☂️☯꧂",
+  "nickNameBot": "Your_Bot_Name",
   "prefix": ".",
   "database": {
     "type": "sqlite",
