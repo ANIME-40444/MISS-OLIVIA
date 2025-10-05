@@ -1,12 +1,14 @@
+const axios = require("axios");
+
 module.exports = {
   config: {
     name: "animix",
-    version: "1.0",
-    author: "MR-JISAN", // ✅ এখানে ঠিক করা হয়েছে
+    version: "2.0",
+    author: "MR-JISAN (Dot Fixed)",
     countDown: 20,
     role: 0,
     shortDescription: "get animix video",
-    longDescription: "get random animix video",
+    longDescription: "get random animix video safely without 429 error",
     category: "anime",
     guide: "{pn} animixvdo",
   },
@@ -16,12 +18,14 @@ module.exports = {
   onStart: async function ({ api, event, message }) {
     const senderID = event.senderID;
 
+    // Loading message
     const loadingMessage = await message.reply({
-      body: "𝐋𝐨𝐚𝐝𝐢𝐧𝐠 𝐫𝐚𝐧𝐝𝐨𝐦 𝐀𝐧𝐢𝐦𝐢𝐱 𝐯𝐢𝐝𝐞𝐨... 𝐏𝐥𝐞𝐚𝐬𝐞 𝐰𝐚𝐢𝐭! 🕕 🔖",
+      body: " 𝐋𝐨𝐚𝐝𝐢𝐧𝐠 𝐫𝐚𝐧𝐝𝐨𝐦 𝐀𝐧𝐢𝐦𝐢𝐱 𝐯𝐢𝐝𝐞𝐨... 𝐏𝐥𝐞𝐚𝐬𝐞 𝐰𝐚𝐢𝐭! 🕕 🔖",
     });
 
-    const link = [
-      "https://i.imgur.com/RXO9A0O.mp4", // MR-JISAN (youtube)
+    // Video links
+    const links = [
+      "https://i.imgur.com/RXO9A0O.mp4",
       "https://i.imgur.com/8fN0IUj.mp4",
       "https://i.imgur.com/16g5s0t.mp4",
       "https://i.imgur.com/vtIsthM.mp4",
@@ -61,26 +65,50 @@ module.exports = {
       "https://i.imgur.com/CCK8TQQ.mp4",
     ];
 
-    const availableVideos = link.filter(video => !this.sentVideos.includes(video));
+    // Avoid duplicate videos
+    const availableVideos = links.filter(v => !this.sentVideos.includes(v));
+    if (availableVideos.length === 0) this.sentVideos = [];
 
-    if (availableVideos.length === 0) {
-      this.sentVideos = [];
-    }
-
-    const randomIndex = Math.floor(Math.random() * availableVideos.length);
-    const randomVideo = availableVideos[randomIndex];
-
+    const randomVideo = availableVideos[Math.floor(Math.random() * availableVideos.length)];
     this.sentVideos.push(randomVideo);
 
-    if (senderID !== null) {
-      message.reply({
-        body: "𝗘𝗡𝗝𝗢𝗬 𝗧𝗛𝗔 𝗔𝗡𝗜𝗠𝗜𝗫 4𝗞 𝗩𝗜𝗗𝗘𝗢 𝗙𝗘𝗘𝗟 𝗧𝗛𝗔 𝗔𝗡𝗜𝗠𝗘 🖤😌🍂",
-        attachment: await global.utils.getStreamFromURL(randomVideo),
+    // Delay function (to avoid rate limit)
+    const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+    await delay(2000); // wait 2 seconds before sending
+
+    // Function to safely stream video
+    async function getSafeStream(url) {
+      try {
+        const response = await axios({
+          url,
+          method: "GET",
+          responseType: "stream",
+          timeout: 15000,
+          headers: { "User-Agent": "Mozilla/5.0" },
+        });
+        return response.data;
+      } catch (error) {
+        console.error("❌ Stream Error:", error.message);
+        return null;
+      }
+    }
+
+    // Try sending the video with fallback
+    try {
+      const stream = await getSafeStream(randomVideo);
+      if (!stream) throw new Error("Video stream unavailable.");
+
+      await message.reply({
+        body: "💖 𝗘𝗡𝗝𝗢𝗬 𝗧𝗛𝗔 𝗔𝗡𝗜𝗠𝗜𝗫 𝟰𝗞 𝗩𝗜𝗗𝗘𝗢 🖤✨\nFeel the Anime 🍃",
+        attachment: stream,
       });
 
-      setTimeout(() => {
-        api.unsendMessage(loadingMessage.messageID);
-      }, 5000);
+      setTimeout(() => api.unsendMessage(loadingMessage.messageID), 3000);
+
+    } catch (err) {
+      console.error("⚠️ Failed to send video:", err);
+      await message.reply("❌ ভিডিও লোড করতে সমস্যা হয়েছে, দয়া করে পরে আবার চেষ্টা করুন ❤️");
+      setTimeout(() => api.unsendMessage(loadingMessage.messageID), 3000);
     }
   },
 };
