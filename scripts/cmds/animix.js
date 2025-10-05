@@ -2,7 +2,7 @@ module.exports = {
   config: {
     name: "animix",
     version: "1.0",
-    author: "MR-JISAN/dot author change)",
+    author: "MR-JISAN", // ✅ এখানে ঠিক করা হয়েছে
     countDown: 20,
     role: 0,
     shortDescription: "get animix video",
@@ -21,7 +21,7 @@ module.exports = {
     });
 
     const link = [
-      "https://i.imgur.com/RXO9A0O.mp4",// MR-JISAN (youtube)
+      "https://i.imgur.com/RXO9A0O.mp4", // MR-JISAN (youtube)
       "https://i.imgur.com/8fN0IUj.mp4",
       "https://i.imgur.com/16g5s0t.mp4",
       "https://i.imgur.com/vtIsthM.mp4",
@@ -36,7 +36,7 @@ module.exports = {
       "https://i.imgur.com/7UtNIEN.mp4",
       "https://i.imgur.com/sgMF3gt.mp4",
       "https://i.imgur.com/cg2Ekj8.mp4",
-     "https://i.imgur.com/5Pv3EJO.mp4",
+      "https://i.imgur.com/5Pv3EJO.mp4",
       "https://i.imgur.com/G1iNixZ.mp4",
       "https://i.imgur.com/eYicjKd.mp4",
       "https://i.imgur.com/QnNagn3.mp4",
@@ -52,14 +52,13 @@ module.exports = {
       "https://i.imgur.com/OwU3CvT.mp4",
       "https://i.imgur.com/6p41mHb.mp4",
       "https://i.imgur.com/ej0dWyt.mp4",
-      "https://i.imgur.com/Z0v2EZk.mp4",              
-"https://i.imgur.com/CLCDfKd.mp4",
-"https://i.imgur.com/mSGjukm.mp4",
-"https://i.imgur.com/SzXaKOT.mp4",
-"https://i.imgur.com/7ieUR1n.mp4",
-"https://i.imgur.com/dBmR9v6.mp4",
-"https://i.imgur.com/CCK8TQQ.mp4",
-      // Add more video links here
+      "https://i.imgur.com/Z0v2EZk.mp4",
+      "https://i.imgur.com/CLCDfKd.mp4",
+      "https://i.imgur.com/mSGjukm.mp4",
+      "https://i.imgur.com/SzXaKOT.mp4",
+      "https://i.imgur.com/7ieUR1n.mp4",
+      "https://i.imgur.com/dBmR9v6.mp4",
+      "https://i.imgur.com/CCK8TQQ.mp4",
     ];
 
     const availableVideos = link.filter(video => !this.sentVideos.includes(video));
@@ -75,7 +74,7 @@ module.exports = {
 
     if (senderID !== null) {
       message.reply({
-        body: '𝗘𝗡𝗝𝗢𝗬 𝗧𝗛𝗔 𝗔𝗡𝗜𝗠𝗜𝗫 4𝗞 𝗩𝗜𝗗𝗘𝗢 𝗙𝗘𝗘𝗟 𝗧𝗛𝗔 𝗔𝗡𝗜𝗡𝗘 🖤😌🍂',
+        body: "𝗘𝗡𝗝𝗢𝗬 𝗧𝗛𝗔 𝗔𝗡𝗜𝗠𝗜𝗫 4𝗞 𝗩𝗜𝗗𝗘𝗢 𝗙𝗘𝗘𝗟 𝗧𝗛𝗔 𝗔𝗡𝗜𝗠𝗘 🖤😌🍂",
         attachment: await global.utils.getStreamFromURL(randomVideo),
       });
 
