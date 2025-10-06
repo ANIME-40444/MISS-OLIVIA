@@ -1,7 +1,7 @@
 module.exports = {
   config: {
     name: "18+",
-    aliases: ["hvdo"],
+    aliases: ["hvid"],
     version: "1.0",
     author: "kshitiz",
     countDown: 60,
