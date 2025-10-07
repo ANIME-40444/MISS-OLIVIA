@@ -1,56 +1,52 @@
-const axios = require("axios");
 const fs = require("fs");
 const path = require("path");
+const crypto = require("crypto");
+const axios = require("axios");
+require("dotenv").config({ path: path.join(__dirname, ".env") });
 
 module.exports = {
   config: {
     name: "anivid",
     aliases: [],
-    author: "Kshitiz",
-    version: "1.0",
-    cooldowns: 10,
-    role: 0,
-    shortDescription: "Get random anime video",
-    longDescription: "Get random anime video from provided API",
+    author: "MR-JISAN ☠️",
+    version: "2.1",
+    shortDescription: "Send random anime video",
     category: "fun",
-    guide: "{p}anivid",
   },
 
-  onStart: async function ({ api, event, args, message }) {
-    api.setMessageReaction("🕐", event.messageID, (err) => {}, true);
+  onStart: async function ({ api, event, message }) {
+    // Environment check
+    const AES_KEY = process.env.AES_KEY;
+    const encFile = path.join(__dirname, "anime.enc");
+
+    if (!fs.existsSync(".env")) return message.reply("❌ AES_KEY set করা হয়নি! কারণ: `.env` ফাইল পাওয়া যায়নি।");
+    if (!AES_KEY) return message.reply("❌ AES_KEY set করা হয়নি! কারণ: `.env` ফাইল থেকে লোড হয়নি।");
+    if (!fs.existsSync(encFile)) return message.reply("❌ anime.enc ফাইল পাওয়া যায়নি!");
 
     try {
-      const response = await axios.get("https://ani-vid-0kr2.onrender.com/kshitiz");
-      const postData = response.data.posts;
-      const randomIndex = Math.floor(Math.random() * postData.length);
-      const randomPost = postData[randomIndex];
+      // এনক্রিপশন ডিক্রিপ্ট
+      const key = Buffer.from(AES_KEY, "hex");
+      const [iv64, data64] = fs.readFileSync(encFile, "utf8").split(":");
+      const iv = Buffer.from(iv64, "base64");
+      const encrypted = Buffer.from(data64, "base64");
+      const decipher = crypto.createDecipheriv("aes-256-cbc", key, iv);
+      const decrypted = Buffer.concat([decipher.update(encrypted), decipher.final()]);
+      const posts = JSON.parse(decrypted.toString()).posts;
 
-      const videoUrls = randomPost.map(url => url.replace(/\\/g, "/"));
+      // র‍্যান্ডম ভিডিও সিলেকশন
+      const randomGroup = posts[Math.floor(Math.random() * posts.length)];
+      const randomUrl = randomGroup[Math.floor(Math.random() * randomGroup.length)];
 
-      const selectedUrl = videoUrls[Math.floor(Math.random() * videoUrls.length)];
+      if (!randomUrl) return message.reply("❌ ভিডিও লোড করতে পারিনি! সম্ভবত `anime.enc` ফাইল খালি বা ভুল।");
 
-      const videoResponse = await axios.get(selectedUrl, { responseType: "stream" });
-
-      const tempVideoPath = path.join(__dirname, "cache", `${Date.now()}.mp4`);
-      const writer = fs.createWriteStream(tempVideoPath);
-      videoResponse.data.pipe(writer);
-
-      writer.on("finish", async () => {
-        const stream = fs.createReadStream(tempVideoPath);
-        const user = response.data.user || "@user_unknown";
-        await message.reply({
-          body: `Random anime Video.`,
-          attachment: stream,
-        });
-        api.setMessageReaction("✅", event.messageID, (err) => {}, true);
-        fs.unlink(tempVideoPath, (err) => {
-          if (err) console.error(err);
-          console.log(`Deleted ${tempVideoPath}`);
-        });
+      // ভিডিও পাঠানো
+      await message.reply({
+        body: `🎬 Random Anime Video URL: ${randomUrl}\n💡 Open in browser or use directly in bot.`,
       });
-    } catch (error) {
-      console.error(error);
-      message.reply("Sorry, an error occurred while processing your request.");
+
+    } catch (e) {
+      console.error(e);
+      message.reply(`❌ ভিডিও লোড করতে সমস্যা হয়েছে। কারণ: ${e.message}`);
     }
-  }
+  },
 };
