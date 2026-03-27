@@ -1,5 +1,4 @@
 const axios = require("axios");
-
 const baseApiUrl = async () => {
   try {
     const base = await axios.get(
