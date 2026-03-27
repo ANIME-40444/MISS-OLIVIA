@@ -1,4 +1,4 @@
-!cmd install bby.js const axios = require('axios');
+const axios = require('axios');
 const baseApiUrl = async () => {
     return "https://noobs-api.top/dipto";
 };
