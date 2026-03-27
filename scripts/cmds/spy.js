@@ -1,4 +1,4 @@
-!cmd install spy.js const axios = require("axios");
+const axios = require("axios");
 
 const baseApiUrl = async () => {
   try {
