@@ -1,11 +1,11 @@
 module.exports = {
     config: {
         name: "murgi6",
-        aliases: ["war2"],
+        aliases: ["war6"],
         version: "3.0",
         author: "Jisan Khan",
         role: 2,
-        category: "War2",
+        category: "War6",
         shortDescription: "Banglish Heavy War Command",
         longDescription: "",
         guide: {
@@ -70,4 +70,10 @@ module.exports = {
         setTimeout(() => { a({ body: "Hizra magir pola tor mare chudmu gamsa pechiye " + name, mentions: arraytag }) }, 40500);
         setTimeout(() => { a({ body: "Tor ma ekhono amar jonno voda phak kore boshe thake " + name, mentions: arraytag }) }, 42000);
         setTimeout(() => { a({ body: "Pakisthaner manchitro banaye tor pison diya dhumu " + name, mentions: arraytag }) }, 43500);
-        setTimeout(() => { a({ body: "
+        setTimeout(() => { a({ body: "Tor mayer voda shirish kagoj diya ghoisha dimu " + name, mentions: arraytag }) }, 45000);
+        setTimeout(() => { a({ body: "DNA test korle dekhbi amar chuday tor jonmo " + name, mentions: arraytag }) }, 46500);
+        setTimeout(() => { a({ body: "Tor mayer voday ekhon public toilet banamu " + name, mentions: arraytag }) }, 48000);
+        
+        setTimeout(() => { a("Chuuda shesh! Ja ekhon giye tor mare tel polish kor. 🤖") }, 50000);
+    }
+};
