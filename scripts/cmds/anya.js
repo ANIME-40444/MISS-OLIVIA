@@ -1,128 +1,66 @@
-[
-    {
-        "key": "dbln",
-        "value": "%7B%2261580656046953%22%3A%22q9goHF2l%22%2C%2261581709765482%22%3A%22a6dFlbZu%22%7D",
-        "domain": "facebook.com",
-        "path": "/login/device-based/",
-        "hostOnly": false,
-        "creation": "2026-03-29T07:53:58.908Z",
-        "lastAccessed": "2026-03-29T07:53:58.908Z"
-    },
-    {
-        "key": "datr",
-        "value": "FT2vabL9Xrz6WwCKCdE7SC_l",
-        "domain": "facebook.com",
-        "path": "/",
-        "hostOnly": false,
-        "creation": "2026-03-29T07:53:58.908Z",
-        "lastAccessed": "2026-03-29T07:53:58.908Z"
-    },
-    {
-        "key": "sb",
-        "value": "FT2vaSl54_VKV60MJm5ZGSF_",
-        "domain": "facebook.com",
-        "path": "/",
-        "hostOnly": false,
-        "creation": "2026-03-29T07:53:58.908Z",
-        "lastAccessed": "2026-03-29T07:53:58.908Z"
-    },
-    {
-        "key": "ps_l",
-        "value": "1",
-        "domain": "facebook.com",
-        "path": "/",
-        "hostOnly": false,
-        "creation": "2026-03-29T07:53:58.908Z",
-        "lastAccessed": "2026-03-29T07:53:58.908Z"
-    },
-    {
-        "key": "ps_n",
-        "value": "1",
-        "domain": "facebook.com",
-        "path": "/",
-        "hostOnly": false,
-        "creation": "2026-03-29T07:53:58.908Z",
-        "lastAccessed": "2026-03-29T07:53:58.908Z"
-    },
-    {
-        "key": "vpd",
-        "value": "v1%3B665x360x3",
-        "domain": "facebook.com",
-        "path": "/",
-        "hostOnly": false,
-        "creation": "2026-03-29T07:53:58.908Z",
-        "lastAccessed": "2026-03-29T07:53:58.908Z"
-    },
-    {
-        "key": "oo",
-        "value": "v1",
-        "domain": "facebook.com",
-        "path": "/",
-        "hostOnly": false,
-        "creation": "2026-03-29T07:53:58.908Z",
-        "lastAccessed": "2026-03-29T07:53:58.908Z"
-    },
-    {
-        "key": "pas",
-        "value": "61580656046953%3A9BNsjIzWiQ%2C61581756857619%3Ab1imLYygwc%2C61582105741049%3Afxy0wtCyMI%2C61581709765482%3AddJR16ow0I",
-        "domain": "facebook.com",
-        "path": "/",
-        "hostOnly": false,
-        "creation": "2026-03-29T07:53:58.908Z",
-        "lastAccessed": "2026-03-29T07:53:58.908Z"
-    },
-    {
-        "key": "locale",
-        "value": "en_US",
-        "domain": "facebook.com",
-        "path": "/",
-        "hostOnly": false,
-        "creation": "2026-03-29T07:53:58.908Z",
-        "lastAccessed": "2026-03-29T07:53:58.908Z"
-    },
-    {
-        "key": "c_user",
-        "value": "61581709765482",
-        "domain": "facebook.com",
-        "path": "/",
-        "hostOnly": false,
-        "creation": "2026-03-29T07:53:58.908Z",
-        "lastAccessed": "2026-03-29T07:53:58.908Z"
-    },
-    {
-        "key": "xs",
-        "value": "5%3A4O-B8iWmq_nPnQ%3A2%3A1774716216%3A-1%3A-1",
-        "domain": "facebook.com",
-        "path": "/",
-        "hostOnly": false,
-        "creation": "2026-03-29T07:53:58.908Z",
-        "lastAccessed": "2026-03-29T07:53:58.908Z"
-    },
-    {
-        "key": "fr",
-        "value": "0oFoQQr1BkJcaV9uR.AWd8EzaBo75Jze4r5RMXKrPacngIwCMzu2hJ_Rqjx3NskIB3oQ8.Bpxo4r..AAA.0.0.BpyNqP.AWcRSa-ml3lOVLlxam6PPvibgXU",
-        "domain": "facebook.com",
-        "path": "/",
-        "hostOnly": false,
-        "creation": "2026-03-29T07:53:58.908Z",
-        "lastAccessed": "2026-03-29T07:53:58.908Z"
-    },
-    {
-        "key": "fbl_st",
-        "value": "101520229%3BT%3A29579513",
-        "domain": "facebook.com",
-        "path": "/",
-        "hostOnly": false,
-        "creation": "2026-03-29T07:53:58.908Z",
-        "lastAccessed": "2026-03-29T07:53:58.908Z"
-    },
-    {
-        "key": "wl_cbv",
-        "value": "v2%3Bclient_version%3A3128%3Btimestamp%3A1774770831",
-        "domain": "facebook.com",
-        "path": "/",
-        "hostOnly": false,
-        "creation": "2026-03-29T07:53:58.908Z",
-        "lastAccessed": "2026-03-29T07:53:58.908Z"
+const axios = require("axios");
+const fs = require("fs-extra");
+const path = require("path");
+
+module.exports = {
+  config: {
+    name: "anya",
+    aliases: ["forger"],
+    version: "3.0",
+    author: "MR-JISAN ⚡",
+    cooldowns: 5,
+    role: 0,
+    shortDescription: "Chat with Anya Forger (AI Voice)",
+    longDescription: "Talk with Anya Forger — she replies in Japanese with a cute AI voice 🎙️",
+    category: "fun",
+    guide: "{p}anya [your text]"
+  },
+
+  onStart: async function ({ api, event, args }) {
+    const { threadID, senderID, messageID } = event;
+    const cachePath = path.join(__dirname, "cache");
+    const audioFile = path.join(cachePath, `anya_${Date.now()}.mp3`);
+
+    try {
+      // If no message from user
+      if (!args[0]) {
+        const userInfo = await api.getUserInfo(senderID);
+        const userName = userInfo[senderID]?.firstName || "senpai";
+        return api.sendMessage(`🌸 Konichiwa ${userName}! I'm Anya Forger. Let's talk! 💬`, threadID, messageID);
+      }
+
+      const userText = args.join(" ");
+      api.sendMessage("🧠 Thinking... please wait!", threadID, messageID);
+
+      // Step 1: Translate text (auto → Japanese)
+      const translateRes = await axios.get(
+        `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ja&dt=t&q=${encodeURIComponent(userText)}`
+      );
+      const japaneseText = translateRes.data?.[0]?.[0]?.[0] || userText;
+
+      // Step 2: Generate voice using VoiceVox
+      const voiceRes = await axios.get(
+        `https://api.tts.quest/v3/voicevox/synthesis?text=${encodeURIComponent(japaneseText)}&speaker=3`
+      );
+
+      const audioURL = voiceRes.data?.mp3StreamingUrl;
+      if (!audioURL) throw new Error("Voice generation failed.");
+
+      // Step 3: Download voice file
+      const { data: audioData } = await axios.get(audioURL, { responseType: "arraybuffer" });
+      await fs.ensureDir(cachePath);
+      await fs.writeFile(audioFile, audioData);
+
+      // Step 4: Send reply
+      const msg = {
+        body: `🩷 ${japaneseText}`,
+        attachment: fs.createReadStream(audioFile)
+      };
+      await api.sendMessage(msg, threadID, () => fs.unlinkSync(audioFile));
+
+    } catch (err) {
+      console.error("❌ Anya Error:", err);
+      api.sendMessage("⚠️ Oops! Something went wrong, please try again later.", threadID, messageID);
     }
-]
+  }
+};
